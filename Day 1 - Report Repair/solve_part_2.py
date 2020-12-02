@@ -4,5 +4,5 @@ with open("input.txt", "r") as f:
     for x in a:
         y = 2020 - x
         if y in pairs:
-            print("{}".format(x * pairs[y]))
+            print(x * pairs[y])
             break

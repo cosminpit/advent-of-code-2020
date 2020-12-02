@@ -4,6 +4,6 @@ with open("input.txt", "r") as f:
     for x in a:
         y = 2020 - x
         if y in seen_so_far:
-            print("{}".format(x * y))
+            print(x * y)
             break
         seen_so_far.add(x)
