@@ -1,7 +1,7 @@
 import re
 
 with open('input.txt', 'r') as f:
-    passports = re.split("\n\n", "".join([line for line in f]))
+    passports = re.split("\n\n", f.read())
 
 expected = set(['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid', 'cid']);
 valid = 0
