@@ -3,11 +3,9 @@ with open('input.txt', 'r') as f:
 
 max_id = 0
 for p in passes:
-    r, c = 0, 0
-    for i in range(7):
-        r = 2*r + (1 if p[i] == 'B' else 0)
-    for i in range(7, 10):
-        c = 2*c + (1 if p[i] == 'R' else 0)
-    max_id = max(max_id, 8*r + c)
+    id = 0
+    for c in p:
+        id = 2*id + (c in ('B', 'R'))
+    max_id = max(max_id, id)
 
 print(max_id)
