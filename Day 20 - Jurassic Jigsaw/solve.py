@@ -38,8 +38,8 @@ def solve(a, i):
 
 def count_monsters(a, m):
     count = 0
-    for i in range(0, len(a) - len(m) + 1):
-        for j in range(0, len(a[0]) - len(m[0]) + 1):
+    for i in range(len(a) - len(m) + 1):
+        for j in range(len(a[0]) - len(m[0]) + 1):
             match = True
             for x in range(len(m)):
                 for y in range(len(m[0])):
