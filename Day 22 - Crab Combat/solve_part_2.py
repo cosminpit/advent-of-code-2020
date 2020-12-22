@@ -11,7 +11,7 @@ def winner(a, b, states):
     if not a: return 1, b
     if not b: return 0, a
 
-    s = tuple(list(a) + ['|'] + list(b))
+    s = tuple(a) + ('|',) + tuple(b)
     if s in states: return 0, a
     states.add(s)
 
@@ -29,5 +29,4 @@ def winner(a, b, states):
 
 u, v = winner(a, b, set())
 n = len(v)
-print(v)
 print(sum([e*(n - i) for i, e in enumerate(v)]))
